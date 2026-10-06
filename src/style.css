@@ -1,3 +1,118 @@
 @import "tailwindcss";
 
+@theme {
+  --color-void: #050608;
+  --color-deep: #0a0c10;
+  --color-panel: #10131a;
+  --color-line: rgb(255 255 255 / 0.09);
+  --color-bone: #ece8df;
+  --color-mist: #a3a7b0;
+  --color-dim: #6c717c;
+  --color-signal: #d9a45b;
 
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    background: var(--color-void);
+  }
+
+  body {
+    background: var(--color-void);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-void);
+  }
+
+  :where(a, button):focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .display {
+    font-family: var(--font-display);
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+    text-transform: uppercase;
+  }
+
+  .heading {
+    font-family: var(--font-display);
+    font-stretch: 112%;
+    font-variation-settings: "wdth" 112;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-mist);
+  }
+
+  /* A planet limb at dawn, drawn in CSS so the hero stands without a render. */
+  .horizon {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(60% 40% at 72% 58%, rgb(217 164 91 / 0.16), transparent 70%),
+      radial-gradient(80% 60% at 20% 10%, rgb(60 80 120 / 0.14), transparent 70%),
+      var(--color-void);
+  }
+
+  .horizon::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 34%;
+    width: 260vmax;
+    height: 260vmax;
+    transform: translateX(-38%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0%, #0c1018 0%, var(--color-void) 30%);
+    box-shadow:
+      0 -1px 0 0 rgb(255 226 180 / 0.55),
+      0 -6px 24px 0 rgb(217 164 91 / 0.35),
+      0 -40px 120px 10px rgb(120 150 200 / 0.18);
+  }
+
+  .horizon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--color-void) 0%, rgb(5 6 8 / 0.6) 35%, transparent 70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

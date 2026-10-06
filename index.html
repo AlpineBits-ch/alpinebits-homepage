@@ -1,222 +1,149 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlpineBits | Game studio</title>
+  <meta name="description" content="AlpineBits is a game studio working on an online space game in Unreal Engine 5.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050608">
+  <link rel="canonical" href="https://alpinebits.ch/">
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AlpineBits">
+  <meta property="og:url" content="https://alpinebits.ch/">
+  <meta property="og:title" content="AlpineBits | Game studio">
+  <meta property="og:description" content="AlpineBits is a game studio working on an online space game in Unreal Engine 5.">
+  <meta property="og:image" content="https://alpinebits.ch/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AlpineBits | Game studio">
+  <meta name="twitter:description" content="AlpineBits is a game studio working on an online space game in Unreal Engine 5.">
+  <meta name="twitter:image" content="https://alpinebits.ch/og-image.jpg">
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-
-    // Default all to denied
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
-      'ad_ad_personalization': 'denied',
+      'ad_personalization': 'denied',
       'analytics_storage': 'denied'
     });
   </script>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VWFEGPPNW"></script>
   <script>
     gtag('js', new Date());
     gtag('config', 'G-9VWFEGPPNW');
   </script>
-  <meta name="description" content="AlpineBits - Ihr Partner für anspruchsvolle Softwareentwicklung mit Angular & .NET, Prozessautomatisierung und IT-Infrastruktur in der Schweiz.">
-  <meta name="keywords" content="Software Entwicklung, Angular, .NET, KMU Automatisierung, IT Service Schweiz, Managed Services, Enterprise Software">
-  <meta name="author" content="AlpineBits">
-  <meta name="robots" content="index, follow">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alpinebits.ch/">
-  <meta property="og:title" content="AlpineBits | Software Entwicklung auf höchstem Niveau">
-  <meta property="og:description" content="Anspruchsvolle Entwicklung und IT-Services. Wir konzipieren Enterprise-Software und verwalten kritische Infrastrukturen.">
-  <meta property="og:image" content="https://alpinebits.ch/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://alpinebits.ch/">
-  <meta property="twitter:title" content="AlpineBits | Software Entwicklung">
-  <meta property="twitter:description" content="Spezialisten für Angular, .NET und Workflow-Automatisierung für KMU.">
-  <meta property="twitter:image" content="https://alpinebits.ch/og-image.jpg">
-
-  <link rel="canonical" href="https://alpinebits.ch/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlpineBits | Software Entwicklung & IT Service</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .mono { font-family: 'JetBrains Mono', monospace; }
-    .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="module" src="/src/main.ts"></script>
 </head>
-<body class="bg-[#0f0f0f] text-gray-200 antialiased">
+<body class="bg-void text-bone antialiased">
 
-<nav class="sticky top-0 z-50 bg-[#0f0f0f]/80 backdrop-blur-md border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <div class="flex items-center space-x-2">
-      <img class="h-8" src="/public/logo.svg" alt="AlpineBits Logo" >
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-bone focus:px-4 focus:py-2 focus:text-void">Skip to content</a>
 
-    </div>
-    <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
-      <a href="#services" class="hover:text-white transition-colors">Service</a>
-      <a href="#clients" class="hover:text-white transition-colors">Kunden</a>
-      <a href="#contact" class="hover:text-white transition-colors">Kontakt</a>
-    </div>
-
-
-    <button class="bg-white text-black px-4 py-2 rounded text-sm font-bold hover:bg-gray-200 transition-colors">
-      <a href="mailto:hello@alpinebits.ch">
-        Projekt starten
-
-      </a>
-    </button>
+<header data-header class="group fixed inset-x-0 top-0 z-50 transition-colors duration-300 data-[scrolled]:border-b data-[scrolled]:border-line data-[scrolled]:bg-void/85 data-[scrolled]:backdrop-blur-md">
+  <div class="mx-auto flex h-16 max-w-[90rem] items-center justify-between px-5 md:h-20 md:px-10">
+    <a href="#top" class="flex items-center" aria-label="AlpineBits, back to top">
+      <img class="h-6 w-auto md:h-7" src="/logo.svg" alt="AlpineBits" width="117" height="28">
+    </a>
+    <a href="#contact" class="eyebrow border border-bone/30 px-4 py-2 !text-bone transition-colors hover:border-bone hover:bg-bone hover:!text-void">Contact</a>
   </div>
-</nav>
-
-<header class="relative py-24 md:py-32 overflow-hidden border-b border-white/5">
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-none">
-      Software Entwicklung <br><span class="text-gray-500">auf höchstem Niveau.</span>
-    </h1>
-    <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-xl">
-      AlpineBits steht für anspruchsvolle Entwicklung und IT-Services. Wir konzipieren Enterprise-Software und verwalten kritische Infrastrukturen.
-    </p>
-    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-      <a href="#contact" class="bg-white text-black text-center px-8 py-4 rounded font-bold hover:bg-gray-200 transition-all">
-        Projekt anfragen
-      </a>
-    </div>
-    </div>
-  <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
 </header>
 
-<section id="services" class="py-24 border-b border-white/5">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="glass p-8 rounded-xl border-blue-500/20">
-        <div class="mono text-xs text-blue-500 mb-4">01 // SOFTWARE DEVELOPMENT</div>
-        <h3 class="text-xl font-bold text-white mb-4 italic">Angular & .NET</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Moderne Web-Architekturen mit C# und Angular. Wir entwickeln skalierbare Lösungen für komplexe Geschäftsprozesse.</p>
-      </div>
+<main id="main">
 
-      <div class="glass p-8 rounded-xl border-blue-500/20">
-        <div class="mono text-xs text-gray-500 mb-4">02 // AUTOMATION</div>
-        <h3 class="text-xl font-bold text-white mb-4 italic">KMU Workflow-Automatisierung</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Schluss mit manuellen Prozessen. Wir entwickeln maßgeschneiderte Skripte und Tools, die Routineaufgaben automatisieren und KMUs effizienter machen.</p>
-      </div>
+  <!-- Hero -->
+  <section id="top" class="relative isolate flex min-h-[100svh] items-end overflow-hidden">
+    <div class="horizon" aria-hidden="true"></div>
 
-      <div class="glass p-8 rounded-xl">
-        <div class="mono text-xs text-gray-500 mb-4">03 // INFRASTRUCTURE</div>
-        <h3 class="text-xl font-bold text-white mb-4 italic">On-Prem Lösungen</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Ganzheitliche IT-Services. Wir übernehmen die Installation, Konfiguration und langfristige Betreuung Ihrer lokalen Serverumgebungen.</p>
-      </div>
-
-      <div class="glass p-8 rounded-xl">
-        <div class="mono text-xs text-gray-500 mb-4">04 // CONSULTING</div>
-        <h3 class="text-xl font-bold text-white mb-4 italic">Managed Services</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Von der Cloud-Migration bis zum technischen Support – wir stellen sicher, dass Ihre Infrastruktur stabil und zukunftssicher bleibt.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="clients" class="py-24 bg-white text-black">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="max-w-md">
-        <h2 class="text-4xl font-bold tracking-tighter mb-4">Unsere Kunden</h2>
-      </div>
-      <div class="mt-12 md:mt-0 flex items-center grayscale hover:grayscale-0 transition-all duration-500">
-        <div class="border-2 border-black px-10 py-6">
-          <span class="text-2xl font-black tracking-widest uppercase italic"><img class="h-14" src="/public/logos/logopaedie21.svg" alt="Logopädie 21"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer id="contact" class="py-24 bg-[#0f0f0f]">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="border border-white/10 p-12 rounded-2xl flex flex-col items-center text-center">
-      <h2 class="text-3xl font-bold text-white mb-4 italic tracking-tight">Bereit für das nächste Projekt?</h2>
-      <p class="text-gray-400 mb-8 mt-2 max-w-md">
-        Kontaktieren Sie uns für eine unverbindliche Erstberatung zu Ihrer Software oder Infrastruktur.
+    <div class="mx-auto w-full max-w-[90rem] px-5 pb-20 pt-32 md:px-10 md:pb-28">
+      <p class="eyebrow mb-6">Game studio</p>
+      <h1 class="display text-[clamp(2.5rem,11vw,10rem)] text-bone">
+        AlpineBits
+      </h1>
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-bone/85 md:text-xl">
+        AlpineBits is a game studio working on an online space game in Unreal Engine 5.
       </p>
-      <a href="mailto:hello@alpinebits.ch" class="text-2xl md:text-3xl font-mono text-white hover:text-gray-400 transition-colors border-b border-white/20 pb-1">
-        hello@alpinebits.ch
-      </a>
     </div>
+  </section>
 
-    <div class="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] uppercase tracking-[0.2em] font-mono">
-      <div class="mb-4 md:mb-0">© 2026 AlpineBits KLG</div>
-      <div class="flex space-x-8">
-        <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
-        <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+  <!-- Technology -->
+  <section id="technology" class="border-t border-line bg-deep py-24 md:py-36">
+    <div class="mx-auto max-w-[90rem] px-5 md:px-10">
+      <div class="grid items-end gap-10 md:grid-cols-12">
+        <div class="md:col-span-8">
+          <h2 class="heading text-4xl text-bone md:text-6xl lg:text-7xl">Technology</h2>
+          <p class="mt-8 max-w-2xl text-lg leading-relaxed text-mist">We write our own simulations for the worlds in the game.</p>
+        </div>
+        <figure class="flex items-end gap-4 md:col-span-4 md:justify-end">
+          <img src="/images/mangrove-240.webp" srcset="/images/mangrove-120.webp 120w, /images/mangrove-240.webp 240w" sizes="6rem" width="240" height="703" loading="lazy" decoding="async" alt="A young mangrove grown by our plant simulation" class="h-auto w-20 md:w-24">
+          <figcaption class="eyebrow max-w-[10rem] leading-relaxed">A young mangrove, grown by the plant simulation</figcaption>
+        </figure>
       </div>
+
+      <ul class="mt-16 border-b border-line md:mt-20">
+        <li class="grid gap-4 border-t border-line py-10 md:grid-cols-12 md:gap-10 md:py-12">
+          <h3 class="heading text-3xl md:col-span-3 md:text-4xl">Planets</h3>
+          <p class="max-w-2xl text-lg leading-relaxed text-mist md:col-span-7">Each planet starts from moving tectonic plates. Where plates collide, the crust folds into mountain ranges. Rivers then cut valleys, slopes wear down, and we work out the climate and ocean currents on top.</p>
+        </li>
+        <li class="grid gap-4 border-t border-line py-10 md:grid-cols-12 md:gap-10 md:py-12">
+          <h3 class="heading text-3xl md:col-span-3 md:text-4xl">Plants</h3>
+          <p class="max-w-2xl text-lg leading-relaxed text-mist md:col-span-7">Each plant starts from a genome and grows step by step where it stands. Its growing tips add shoots, leaves and roots, paid for with the light and water it gets.</p>
+        </li>
+        <li class="grid gap-4 border-t border-line py-10 md:grid-cols-12 md:gap-10 md:py-12">
+          <h3 class="heading text-3xl md:col-span-3 md:text-4xl">Clouds</h3>
+          <p class="max-w-2xl text-lg leading-relaxed text-mist md:col-span-7">We're writing a large-eddy simulation: a model of moist air in which rising eddies mix and cool, and cloud forms wherever the air saturates. We check it against BOMEX, a published reference case for trade-wind cumulus clouds.</p>
+        </li>
+      </ul>
     </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="border-t border-line bg-deep py-24 md:py-36">
+    <div class="mx-auto max-w-[90rem] px-5 md:px-10">
+      <h2 class="eyebrow">Contact</h2>
+      <a href="mailto:hello@alpinebits.ch" class="heading mt-6 inline-block border-b border-bone/25 pb-2 text-2xl text-bone transition-colors hover:border-signal hover:text-signal sm:text-4xl md:text-6xl">hello@alpinebits.ch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-line bg-void">
+  <div class="mx-auto flex max-w-[90rem] flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-10">
+    <img class="h-5 w-auto self-start opacity-80 md:self-auto" src="/logo.svg" alt="AlpineBits" width="98" height="24" loading="lazy">
+    <p class="eyebrow !text-dim">&copy; 2026 AlpineBits KLG</p>
+    <nav aria-label="Legal" class="flex gap-8">
+      <a href="/impressum.html" class="eyebrow transition-colors hover:text-bone">Impressum</a>
+      <a href="/datenschutz.html" class="eyebrow transition-colors hover:text-bone">Datenschutz</a>
+    </nav>
   </div>
 </footer>
 
-<div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[100] p-6 hidden">
-  <div class="max-w-4xl mx-auto glass bg-[#0f0f0f]/95 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-      <div class="flex-1">
-        <h3 class="text-white text-xl font-bold mb-2 italic">Cookie-Einstellungen</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          Wir verwenden Google-Technologien, um unsere Webseite und unsere Services für Sie zu optimieren. Mit dem Klick auf "Alle akzeptieren" unterstützen Sie uns dabei und stimmen der Verarbeitung Ihrer Daten gemäss unserer
-          <a href="datenschutz.html" class="text-white underline hover:text-blue-400 transition-colors">Datenschutzerklärung</a> zu.
-        </p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
-        <button onclick="closeBanner()" class="px-8 py-3 text-xs font-mono uppercase tracking-widest text-gray-400 border border-white/10 rounded hover:bg-white/5 transition-all">
-          Nur Notwendige
-        </button>
-        <button onclick="acceptCookies()" class="px-8 py-3 text-xs font-mono uppercase tracking-widest bg-white text-black font-bold rounded hover:bg-gray-200 transition-all">
-          Alle akzeptieren
-        </button>
-      </div>
+<div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[100] p-4 md:p-6" role="region" aria-label="Cookie settings" hidden>
+  <div class="mx-auto flex max-w-4xl flex-col gap-6 border border-line bg-panel/95 p-6 shadow-2xl backdrop-blur-xl md:flex-row md:items-center md:p-8">
+    <div class="flex-1">
+      <p class="eyebrow !text-bone">Cookies</p>
+      <p class="mt-3 text-sm leading-relaxed text-mist">
+        With your OK, we use Google Analytics to see how people use this site. See our
+        <a href="/datenschutz.html" class="text-bone underline underline-offset-4 hover:text-signal">privacy policy</a> (German).
+      </p>
+    </div>
+    <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+      <button type="button" data-consent="necessary" class="eyebrow border border-bone/25 px-6 py-3 transition-colors hover:border-bone hover:text-bone">Necessary only</button>
+      <button type="button" data-consent="accept" class="eyebrow bg-bone px-6 py-3 !text-void transition-colors hover:bg-signal">Accept all</button>
     </div>
   </div>
 </div>
-
-<script>
-  window.onload = function() {
-    if (!localStorage.getItem('alpinebits_consent')) {
-      document.getElementById('cookie-banner').classList.remove('hidden');
-      // Optional: Trigger a slight fade-in animation
-      document.getElementById('cookie-banner').classList.add('animate-in', 'fade-in', 'slide-in-from-bottom-4', 'duration-700');
-    }
-  }
-
-  function acceptCookies() {
-    localStorage.setItem('alpinebits_consent', 'true');
-    // Add your Google Analytics load script here
-    closeBanner();
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-
-  function closeBanner() {
-    document.getElementById('cookie-banner').classList.add('hidden');
-  }
-
-  window.onload = function() {
-    if (localStorage.getItem('alpinebits_consent') === 'true') {
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted',
-        'ad_storage': 'granted'
-      });
-    } else {
-      document.getElementById('cookie-banner').classList.remove('hidden');
-    }
-  }
-</script>
-
 
 </body>
 </html>
